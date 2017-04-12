@@ -1,6 +1,6 @@
 {
   "name": "self-install",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
@@ -17,5 +17,10 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "pkgbuild": "^0.0.4"
-  }
+  },
+  "files": [
+    "lib/bootstrap.js",
+    "lib/index.js",
+    "lib/spawn.js"
+  ]
 }

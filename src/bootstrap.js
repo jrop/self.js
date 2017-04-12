@@ -32,8 +32,11 @@ async function main() {
 		const tarName = path.resolve('${name}-${version}.tgz')
 		await new Promise((y, n) => fs.writeFile(tarName, new Buffer(PKG, 'base64'), e => e ? n(e) : y()))
 		await first([
-			['yarn', ['add', 'file:' + tarName]],
-			['npm', ['install', tarName]]])
+			['yarn', ['add', 'file:' + tarName], {
+				stdio: 'inherit',
+				env: Object.assign({}, process.env, {NODE_ENV: 'production'})
+			}],
+			['npm', ['install', '--production', tarName]]])
 		await new Promise((y, n) => fs.unlink(tarName, e => e ? n(e) : y()))
 	}
 	${entry}
