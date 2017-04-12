@@ -1,12 +1,21 @@
 {
   "name": "self-install",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
+  "scripts": {
+    "prepublish": "pkgbuild",
+    "pkg://main": "babel src/ -d lib/",
+    "pkg*://main": "babel -w src/ -d lib/"
+  },
   "dependencies": {
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.3.3",
     "mz": "^2.6.0",
     "yargs": "^7.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "pkgbuild": "^0.0.4"
   }
 }

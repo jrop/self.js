@@ -27,7 +27,7 @@ async function dirToBase64(directory, name, version) {
 async function main() {
 	const {argv} = yargs.usage('$0 [options] DIRECTORY')
 		.help().alias('h', 'help')
-		.version(require('./package').version).alias('v', 'version')
+		.version(require('../package').version).alias('v', 'version')
 		.option('entry', {
 			alias: 'e',
 			description: 'The JS to run once packages are installed',
