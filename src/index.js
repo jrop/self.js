@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const {transform} = require('babel-core')
 const assert = require('assert')
 const bootstrap = require('./bootstrap')
