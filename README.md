@@ -1,5 +1,7 @@
 # self.js
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jrop/self.js.svg)](https://greenkeeper.io/)
+
 Create self-extracting Node.JS packages.
 
 Self.js works by creating a self-extracting Node.JS script (it embeds the output of `npm pack`).  Later, when a user runs this script, it will unpack itself and execute.
